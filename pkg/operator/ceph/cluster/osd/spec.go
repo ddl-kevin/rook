@@ -583,6 +583,7 @@ func (c *Cluster) makeDeployment(osdProps osdProperties, osd OSDInfo, provisionC
 			},
 			Volumes:       volumes,
 			SchedulerName: osdProps.schedulerName,
+			ImagePullSecrets:  c.spec.ImagePullSecrets,
 		},
 	}
 
